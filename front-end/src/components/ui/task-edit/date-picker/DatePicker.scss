@@ -1,0 +1,10 @@
+.rdp-root{
+    --rdp-cell-size:32px;
+    --rdp-caption-font-size:17px;
+    --rdp-accent-color:#87F5FB;
+    --rdp-today-color:#DE3C4B;
+
+
+    @apply m-1;
+    font-size: 85%;
+}
