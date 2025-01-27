@@ -21,7 +21,6 @@ export const Timer = () => {
 	const { deleteSession, isDeletePending } = useDeleteSession(() =>
 		timerState.setSecondsLeft(workInterval * 60)
     )
-    console.log(timerState.secondsLeft)
 	const { mutate, isPending } = useCreateSession()
 	return (
 		<div className='relative w-80 text-center'>

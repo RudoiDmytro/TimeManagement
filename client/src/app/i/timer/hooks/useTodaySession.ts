@@ -35,7 +35,6 @@ export const useTodaySession = ({
 		if (isSuccess && rounds) {
 			const activeRound = rounds.find(round => !round.isCompleted)
 			setActiveRound(activeRound)
-			console.log(activeRound)
 			if (activeRound && activeRound?.totalSeconds !== 0) {
 				setSecondsLeft(activeRound.totalSeconds)
 			}

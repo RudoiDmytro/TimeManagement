@@ -82,7 +82,6 @@ export const SingleSelect = ({
 							onClick={e => {
 								e.preventDefault()
 								onChange(item.value)
-								console.log(item.value)
 								setIsShowing(false)
 							}}
 							style={isColorSelect ? { backgroundColor: item.value } : {}}

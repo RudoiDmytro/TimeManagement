@@ -33,6 +33,14 @@ export class TimeBlockController {
 	create(@Body() dto: TimeBlockDto, @CurrentUser('id') userId: string) {
 		return this.timeBlockService.create(dto, userId)
 	}
+	
+	@UsePipes(new ValidationPipe())
+	@HttpCode(200)
+	@Put('update-order')
+	@Auth()
+	updateOrder(@Body() dto: UpdateTimeBlockDto) {
+		return this.timeBlockService.updateOrder(dto.ids)
+	}
 
 	@UsePipes(new ValidationPipe())
 	@HttpCode(200)
@@ -46,14 +54,7 @@ export class TimeBlockController {
 		return this.timeBlockService.update(dto, id, userId)
 	}
 
-	@UsePipes(new ValidationPipe())
-	@HttpCode(200)
-	@Put('update-order')
-	@Auth()
-	updateOrder(@Body() dto: UpdateTimeBlockDto) {
-		return this.timeBlockService.updateOrder(dto.ids)
-	}
-
+	
 	@HttpCode(200)
 	@Delete(':id')
 	@Auth()

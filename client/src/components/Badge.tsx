@@ -20,6 +20,8 @@ export default function Badge({
 											? ' bg-orange-500/75'
 											: variant === 'LOW'
 												? ' bg-blue-600/70'
+													: style !== null
+													? 'bg-transparent'
 												: 'bg-primary text-background'
 								} 
                     text-sm font-medium transition `}

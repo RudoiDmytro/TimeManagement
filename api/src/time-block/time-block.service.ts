@@ -8,7 +8,7 @@ export class TimeBlockService {
 	constructor(private prisma: PrismaService) {}
 
 	create(dto: TimeBlockDto, userId: string) {
-		return this.prisma.task.create({
+		return this.prisma.timeBlock.create({
 			data: {
 				...dto,
 				user: {
@@ -28,14 +28,14 @@ export class TimeBlockService {
 	}
 
 	update(dto: Partial<TimeBlockDto>, timeBlockId: string, userId: string) {
-		return this.prisma.task.update({
+		return this.prisma.timeBlock.update({
 			where: { id: timeBlockId, userId },
 			data: dto
 		})
 	}
 
 	delete(taskId: string, userId: string) {
-		return this.prisma.task.delete({
+		return this.prisma.timeBlock.delete({
 			where: { id: taskId, userId }
 		})
 	}

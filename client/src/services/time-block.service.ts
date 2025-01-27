@@ -17,20 +17,32 @@ class TimeBlockService {
 	}
 
 	async createTimeBlock(data: TypeTimeBlockFormState) {
-		const response = await axiosWithAuth.post(this.BASE_URL, data)
+		const requestData = {
+			...data,
+			duration: Number(data.duration)
+		}
+
+		const response = await axiosWithAuth.post(this.BASE_URL, requestData)
 		return response
 	}
 
 	async updateOrderTimeBlock(ids: string[]) {
-		const response = await axiosWithAuth.put(
-			`${this.BASE_URL}/update-order`,
+		console.log(ids)
+		const response = await axiosWithAuth.put(`${this.BASE_URL}/update-order`, {
 			ids
-		)
+		})
 		return response
 	}
 
 	async updateTimeBlock(id: string, data: TypeTimeBlockFormState) {
-		const response = await axiosWithAuth.put(`${this.BASE_URL}/${id}`, data)
+		const requestData = {
+			...data,
+			duration: Number(data.duration)
+		}
+		const response = await axiosWithAuth.put(
+			`${this.BASE_URL}/${id}`,
+			requestData
+		)
 		return response
 	}
 

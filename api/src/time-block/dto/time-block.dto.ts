@@ -2,14 +2,14 @@ import { IsNumber, IsOptional, IsString } from "class-validator"
 
 export class TimeBlockDto {
     @IsString()
-    title:string
+    name:string
 
     @IsString()
     @IsOptional()
     color?:string
 
-    @IsString()
-    duration:string
+    @IsNumber()
+    duration:number
 
     @IsNumber()
     @IsOptional()
