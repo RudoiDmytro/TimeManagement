@@ -128,22 +128,3 @@ Before you begin, ensure you have the following installed:
     ```
 
     The frontend application will typically be available at `http://localhost:3000` (or another port as specified by Next.js).
-
-## Folder Structure
-TimeManagementApp/
-├── api/ # NestJS Backend
-│ ├── src/ # Source code
-│ │ ├── auth/ # Authentication logic
-│ │ ├── user/ # User management
-│ │ ├── task/ # Task management
-│ │ └── ...
-│ ├── prisma/ # Prisma ORM configuration
-│ ├── .env # Environment variables
-│ └── ...
-├── client/ # Next.js Frontend
-│ ├── pages/ # Next.js pages (routes)
-│ ├── components/ # Reusable React components
-│ ├── styles/ # SCSS global styles
-│ └── ...
-├── README.md # This file
-└── ...
