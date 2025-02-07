@@ -66,31 +66,30 @@ Before you begin, ensure you have the following installed:
 1.  **Clone the repository:**
 
     ```bash
-    git clone [Your Repository URL]
-    cd [Your Project Name]
+    git clone https://github.com/RudoiDmytro/TimeManagement.git
+    cd TimeManagement
     ```
 
 2.  **Install backend dependencies:**
 
     ```bash
-    cd api  # Navigate to the backend directory
+    cd .\api  # Navigate to the backend directory
     npm install  # or yarn install
     ```
 
 3.  **Install frontend dependencies:**
 
     ```bash
-    cd ../client  # Navigate to the frontend directory
+    cd .\client  # Navigate to the frontend directory
     npm install  # or yarn install
     ```
 
 ## Configuration
 
-1.  **Create `.env` files:**
+1.  **Create `.env` file:**
 
     *   Create a `.env` file in the `api` directory (backend).
-    *   Create a `.env` file in the `client` directory (frontend).
-
+ 
 2.  **Configure environment variables:**
 
     *   **Backend (`api/.env`):**
@@ -98,24 +97,15 @@ Before you begin, ensure you have the following installed:
         ```
         DATABASE_URL="postgresql://[user]:[password]@[host]:[port]/[database]?schema=public"
         JWT_SECRET="[Your Secret Key]" # Change this to a strong, random string
-        PORT=3000
         ```
 
         *   Replace `[user]`, `[password]`, `[host]`, `[port]`, and `[database]` with your PostgreSQL credentials.
         *   Replace `[Your Secret Key]` with a strong, randomly generated secret key.
 
-    *   **Frontend (`client/.env`):**
-
-        ```
-        NEXT_PUBLIC_API_URL="http://localhost:3000"  # Or your deployed backend URL
-        ```
-
-        *   Change `NEXT_PUBLIC_API_URL` to point to your backend server.  If you are running locally, `http://localhost:3000` is usually correct.
-
 3.  **Run Prisma Migrations:**
 
     ```bash
-    cd api
+    cd  .\api
     npx prisma migrate dev --name init
     npx prisma generate
     ```
@@ -126,18 +116,18 @@ Before you begin, ensure you have the following installed:
 1.  **Start the backend (NestJS):**
 
     ```bash
-    cd api
+    cd .\api
     npm run start:dev  # or yarn start:dev
     ```
 
 2.  **Start the frontend (Next.js):**
 
     ```bash
-    cd ../client
+    cd .\client
     npm run dev  # or yarn dev
     ```
 
-    The frontend application will typically be available at `http://localhost:3001` (or another port as specified by Next.js).
+    The frontend application will typically be available at `http://localhost:3000` (or another port as specified by Next.js).
 
 ## Folder Structure
 TimeManagementApp/
@@ -153,8 +143,7 @@ TimeManagementApp/
 ├── client/ # Next.js Frontend
 │ ├── pages/ # Next.js pages (routes)
 │ ├── components/ # Reusable React components
-│ ├── styles/ # CSS modules/global styles
-│ ├── .env # Environment variables
+│ ├── styles/ # SCSS global styles
 │ └── ...
 ├── README.md # This file
 └── ...
