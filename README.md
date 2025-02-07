@@ -1,4 +1,4 @@
-# [Your Project Name] - Time Management App
+# Time Management App
 A modern, feature-rich time management application built with a cutting-edge tech stack.  Organize your tasks, track your time, and boost your productivity!
 
 ## Table of Contents
