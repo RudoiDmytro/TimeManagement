@@ -1,4 +1,12 @@
-const Checkbox = props => {
+import { InputHTMLAttributes } from "react";
+
+interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+	extra?: string;
+	color?: string;
+  }
+  
+
+const Checkbox = (props: CheckboxProps) => {
 	const { extra, color, ...rest } = props
 	return (
 		<label className='flex items-center cursor-pointer relative'>

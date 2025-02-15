@@ -10,7 +10,7 @@ import type {
 
 import styles from './TimeBlocking.module.scss'
 
-import { useDeleteTimeBlock } from './hooks/useDeleteTimeblock'
+import { useDeleteTimeBlock } from './hooks/useDeleteTimeBlock'
 import { useTimeBlockSortable } from './hooks/useTimeBlockSortable'
 
 export const TimeBlock = ({ item }: { item: ITimeBlockResponse }) => {

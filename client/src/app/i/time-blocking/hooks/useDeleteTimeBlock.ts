@@ -1,7 +1,6 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { toast } from 'sonner'
 
-import { taskService } from '@/services/task.service'
 import { timeBlockService } from '@/services/time-block.service'
 
 export const useDeleteTimeBlock = (itemId: string) => {

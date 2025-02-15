@@ -1,11 +1,5 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react'
 
-type TypeOut = {
-	ref: any
-	isShowing: boolean
-	setIsShowing: Dispatch<SetStateAction<boolean>>
-}
-
 export const useOutside = (initialIsVisible: boolean) => {
 	const [isShowing, setIsShowing] = useState(initialIsVisible)
 	const ref = useRef<HTMLDivElement>(null)
