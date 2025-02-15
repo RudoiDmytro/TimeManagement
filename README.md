@@ -10,13 +10,6 @@ A modern, feature-rich time management application built with a cutting-edge tec
 *   [Installation](#installation)
 *   [Configuration](#configuration)
 *   [Running the Application](#running-the-application)
-*   [Folder Structure](#folder-structure)
-*   [API Endpoints](#api-endpoints)
-*   [Authentication](#authentication)
-*   [Database](#database)
-*   [Contributing](#contributing)
-*   [License](#license)
-*   [Contact](#contact)
 
 ## Features
 
